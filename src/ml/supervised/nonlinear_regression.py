@@ -44,8 +44,11 @@ class ANN:
         #for i in range(len(self.layers)):
             #print "layers", i, "is",self.layers[i].shape
         
-    def g(self,z):
+    def sig_fn(self,z):
         return 1 / (1 + np.exp(z))
+    
+    def tanh_fn(self,z):
+        return np.tanh(z)
     
     def run_ann(self):
         it = 0
